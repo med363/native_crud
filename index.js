@@ -12,5 +12,5 @@ const productsRouter = require("./routes/products.router");
 // app.use("/api",productsRouter)
 /*autre structure dans une seul line*/
 app.use("/api",[usersRouter,productsRouter])
-const PORT= 4000;
+const PORT= process.env.PORT || 4000;
 app.listen(PORT,()=> console.log(`server run on ${PORT}`))
